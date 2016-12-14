@@ -25,6 +25,12 @@ TextureImporter:
     21300040: SuperProbotector_20
     21300042: SuperProbotector_21
     21300044: SuperProbotector_22
+    21300046: SuperProbotector_23
+    21300048: SuperProbotector_24
+    21300050: SuperProbotector_25
+    21300052: SuperProbotector_26
+    21300054: SuperProbotector_27
+    21300056: SuperProbotector_28
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -70,7 +76,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 250
+        y: 400
         width: 45
         height: 50
       alignment: 1
@@ -80,7 +86,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 250
+        y: 400
         width: 45
         height: 50
       alignment: 1
@@ -90,7 +96,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 90
-        y: 250
+        y: 400
         width: 45
         height: 50
       alignment: 1
@@ -100,7 +106,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 135
-        y: 250
+        y: 400
         width: 45
         height: 50
       alignment: 1
@@ -110,7 +116,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 180
-        y: 250
+        y: 400
         width: 45
         height: 50
       alignment: 1
@@ -119,8 +125,8 @@ TextureImporter:
     - name: SuperProbotector_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 200
+        x: 225
+        y: 400
         width: 45
         height: 50
       alignment: 1
@@ -129,8 +135,8 @@ TextureImporter:
     - name: SuperProbotector_6
       rect:
         serializedVersion: 2
-        x: 45
-        y: 200
+        x: 270
+        y: 400
         width: 45
         height: 50
       alignment: 1
@@ -139,8 +145,8 @@ TextureImporter:
     - name: SuperProbotector_7
       rect:
         serializedVersion: 2
-        x: 90
-        y: 200
+        x: 0
+        y: 350
         width: 45
         height: 50
       alignment: 1
@@ -149,8 +155,8 @@ TextureImporter:
     - name: SuperProbotector_8
       rect:
         serializedVersion: 2
-        x: 135
-        y: 200
+        x: 45
+        y: 350
         width: 45
         height: 50
       alignment: 1
@@ -159,8 +165,8 @@ TextureImporter:
     - name: SuperProbotector_9
       rect:
         serializedVersion: 2
-        x: 180
-        y: 200
+        x: 90
+        y: 350
         width: 45
         height: 50
       alignment: 1
@@ -169,8 +175,8 @@ TextureImporter:
     - name: SuperProbotector_10
       rect:
         serializedVersion: 2
-        x: 225
-        y: 200
+        x: 135
+        y: 350
         width: 45
         height: 50
       alignment: 1
@@ -179,8 +185,8 @@ TextureImporter:
     - name: SuperProbotector_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 150
+        x: 180
+        y: 350
         width: 45
         height: 50
       alignment: 1
@@ -189,8 +195,8 @@ TextureImporter:
     - name: SuperProbotector_12
       rect:
         serializedVersion: 2
-        x: 45
-        y: 150
+        x: 225
+        y: 350
         width: 45
         height: 50
       alignment: 1
@@ -199,8 +205,8 @@ TextureImporter:
     - name: SuperProbotector_13
       rect:
         serializedVersion: 2
-        x: 90
-        y: 150
+        x: 0
+        y: 300
         width: 45
         height: 50
       alignment: 1
@@ -209,8 +215,8 @@ TextureImporter:
     - name: SuperProbotector_14
       rect:
         serializedVersion: 2
-        x: 135
-        y: 150
+        x: 45
+        y: 300
         width: 45
         height: 50
       alignment: 1
@@ -219,8 +225,8 @@ TextureImporter:
     - name: SuperProbotector_15
       rect:
         serializedVersion: 2
-        x: 180
-        y: 150
+        x: 90
+        y: 300
         width: 45
         height: 50
       alignment: 1
@@ -229,8 +235,8 @@ TextureImporter:
     - name: SuperProbotector_16
       rect:
         serializedVersion: 2
-        x: 225
-        y: 150
+        x: 135
+        y: 300
         width: 45
         height: 50
       alignment: 1
@@ -239,8 +245,8 @@ TextureImporter:
     - name: SuperProbotector_17
       rect:
         serializedVersion: 2
-        x: 0
-        y: 100
+        x: 180
+        y: 300
         width: 45
         height: 50
       alignment: 1
@@ -249,8 +255,8 @@ TextureImporter:
     - name: SuperProbotector_18
       rect:
         serializedVersion: 2
-        x: 45
-        y: 100
+        x: 225
+        y: 300
         width: 45
         height: 50
       alignment: 1
@@ -259,8 +265,8 @@ TextureImporter:
     - name: SuperProbotector_19
       rect:
         serializedVersion: 2
-        x: 90
-        y: 100
+        x: 0
+        y: 250
         width: 45
         height: 50
       alignment: 1
@@ -269,8 +275,8 @@ TextureImporter:
     - name: SuperProbotector_20
       rect:
         serializedVersion: 2
-        x: 135
-        y: 100
+        x: 45
+        y: 250
         width: 45
         height: 50
       alignment: 1
@@ -279,8 +285,8 @@ TextureImporter:
     - name: SuperProbotector_21
       rect:
         serializedVersion: 2
-        x: 180
-        y: 100
+        x: 90
+        y: 250
         width: 45
         height: 50
       alignment: 1
@@ -289,8 +295,68 @@ TextureImporter:
     - name: SuperProbotector_22
       rect:
         serializedVersion: 2
+        x: 135
+        y: 250
+        width: 45
+        height: 50
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector_23
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 250
+        width: 45
+        height: 50
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector_24
+      rect:
+        serializedVersion: 2
         x: 225
-        y: 100
+        y: 250
+        width: 45
+        height: 50
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 45
+        height: 50
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector_26
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 200
+        width: 45
+        height: 50
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector_27
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 200
+        width: 45
+        height: 50
+      alignment: 1
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector_28
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 200
         width: 45
         height: 50
       alignment: 1

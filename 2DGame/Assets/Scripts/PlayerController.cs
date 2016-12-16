@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
 	private  bool onground;
 	public  float radiousGround;
 	public LayerMask groundLayer;
-	public Transform groundCheck;
+	public Transform groundCheck= null;
 	public  float JumpHeight;
 
 

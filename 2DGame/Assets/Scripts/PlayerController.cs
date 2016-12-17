@@ -22,29 +22,44 @@ public class PlayerController : MonoBehaviour {
 
 	private bool facingRight;
 
+
+
 	// Use this for initialization
 	void Start () {
 	
 		transform= this.GetComponent<Transform> ();
 		animator= this.GetComponent<Animator> ();
 		rigidBody2D= this.GetComponent<Rigidbody2D> ();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if(onground){
 
-		if (Input.GetAxis ("Jump") > 0 && onground ) {
-			onground = false;
-			animator.SetBool ("onGround", onground);
-			//adds a force to jump
-			rigidBody2D.AddForce (new Vector2 (0, JumpHeight));
-		} 
+			if (Input.GetAxis ("Jump") > 0  ) {
+				onground = false;
+				animator.SetBool ("onGround", onground);
+				//adds a force to jump
+				rigidBody2D.AddForce (new Vector2 (0, JumpHeight));
+			} 
 
+	
+
+
+
+		}
 	}
 	void FixedUpdate () {
 
+		bool  lookingup = Input.GetAxis ("Vertical")>0;
+		bool  islying = Input.GetAxis ("Vertical")<0;
+	
+
+		animator.SetBool ("islying",islying);
+		animator.SetBool ("lookingup",lookingup);
 		//jumpping 
-	    //if(!onground)
+		//if( !onground)
 		{
 
 			//Debug.Log ("FixedUpdate");
@@ -68,10 +83,6 @@ public class PlayerController : MonoBehaviour {
 		//if the player is jumpping the direction on X remains
 		Vector2 _vector = new Vector2 (movx * MaxHorizontalVelocity, rigidBody2D.velocity.y);
 		rigidBody2D.velocity = _vector;
-
-	
-
-
 
 	}
 

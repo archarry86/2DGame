@@ -9,7 +9,7 @@ public class CameraTracker : MonoBehaviour {
 
 	public float smoothing;
 
-	public float minY;
+	private float minY;
 
 	private Transform mytransform;
 
@@ -27,7 +27,7 @@ public class CameraTracker : MonoBehaviour {
 	
 		Vector3 result = target.position + offset;
 
-		//if (result.y < minY)
+		if (result.y < minY)
 		{
 			result.y = minY;
 		}

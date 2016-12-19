@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
 public class PlayerController : MonoBehaviour {
 
 
@@ -12,9 +14,8 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask groundLayer;
 	public Transform groundCheck= null;
 	public  float JumpHeight;
-
-
-	public Transform transform;
+	
+	private Transform transform;
 
 	public Animator animator; 
 
@@ -22,26 +23,24 @@ public class PlayerController : MonoBehaviour {
 
 	private bool facingRight;
 
-	//TODO HOW TO ENABLED AND DISABLED SOME COLIDERS
-	//private BoxCollider2D onliyingcolider;
+	private Collider2D []MyColiders;
 
-	// Use this for initialization
+
 	void Start () {
 	
 		transform= this.GetComponent<Transform> ();
 		animator= this.GetComponent<Animator> ();
 		rigidBody2D= this.GetComponent<Rigidbody2D> ();
 
-	
-		/*var coliders = this.GetComponents<BoxCollider2D> (); 
-		onliyingcolider = coliders[coliders.Length-1];
-		onliyingcolider.enabled = false;
-*/
+		MyColiders = this.GetComponents<Collider2D> ();
+		BoxCollider2D boxsize = MyColiders[0] as BoxCollider2D;
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 		if(onground){
 			
 			if (Input.GetAxis ("Jump") > 0.1  ) {
@@ -56,50 +55,48 @@ public class PlayerController : MonoBehaviour {
 			
 		}
 	}
-	void FixedUpdate () {
 
-	
+
+	void FixedUpdate () {
 	
 		float yaxis =Input.GetAxis ("Vertical");
+		float xaxis = Input.GetAxis("Horizontal");
+
+		float absxaxis = Mathf.Abs (xaxis);
+
 		animator.SetFloat ("yaxis",yaxis);
 
 		//onliyingcolider.enabled = (yaxis < 0);
+		onground = Physics2D.OverlapCircle(groundCheck.position,radiousGround , groundLayer.value);
+		animator.SetBool ("onground",onground);
 
-		onground = Physics2D.OverlapCircle (groundCheck.position, radiousGround);
+		if (onground && animator.GetBool ("isjumping")) {
+			animator.SetBool ("isjumping",false);
+
+		}
+
+
+	
 
 		animator.SetBool ("onground", onground);
 
-		//if(onground)
-		//animator.SetBool ("isjumping", false);
-
-		if(onground){
-			
-			if (Input.GetAxis ("Jump") > 0.1  ) {
-				animator.SetBool ("isjumping",true);
-				rigidBody2D.AddForce (new Vector2 (0, JumpHeight));
-				onground = false;
-				
-				animator.SetBool ("onground", onground);
-				//adds a force to jump
-				
-			} 
-			
-		}
-		//walking
-		float movx = Input.GetAxis("Horizontal");
 
 	
-		if (movx > 0 && facingRight) {
+		if (xaxis > 0 && facingRight) {
 			Flip();
-		} else if (movx < 0 &&  !facingRight){
+		} else if (xaxis < 0 &&  !facingRight){
 			Flip();
 		}
 
-		animator.SetFloat ("xvel",Mathf.Abs( movx));
+		animator.SetFloat ("xvel",absxaxis);
 
 		//if the player is jumpping the direction on X remains
-		Vector2 _vector = new Vector2 (movx * MaxHorizontalVelocity, rigidBody2D.velocity.y);
+		Vector2 _vector = new Vector2 (xaxis * MaxHorizontalVelocity, rigidBody2D.velocity.y);
 		rigidBody2D.velocity = _vector;
+
+		EnablingBoxesLying (onground && xaxis ==0 && yaxis < 0);
+
+
 
 
 	
@@ -110,5 +107,16 @@ public class PlayerController : MonoBehaviour {
 		Vector3 _localscale = transform.localScale;
 		_localscale.x *= -1;
 		transform.localScale = _localscale;
+	}
+
+	public int GetFlipNumber(){
+		return facingRight ? -1 : 1;
+	}
+
+	public void EnablingBoxesLying(bool value){
+
+		MyColiders [1].enabled = !value;
+		MyColiders [2].enabled = !value;
+		MyColiders [3].enabled = value;
 	}
 }

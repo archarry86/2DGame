@@ -21,11 +21,11 @@ public class GunController : MonoBehaviour {
 
 	public GameObject prefabBullet;
 
-	public float _time = 0.5f;
+	public float fireRate = 0.5F;
 
 	public float _forcescale = 1f;
 	
-	private float _timetoshot; 
+	private new float _timetoshot; 
 
 	private AudioSource adudiosource;
 
@@ -113,34 +113,39 @@ public class GunController : MonoBehaviour {
 			else if( yaxis < 0)
 			{
 				IndexBarrelGun =5;
-				UnityEngine.Debug.Log("FORCE 5 "+GetGunForce().ToString());
+				//UnityEngine.Debug.Log("FORCE 5 "+GetGunForce().ToString());
 
-				UnityEngine.Debug.Log("X"+IndexBarrelGun/bulletVelocities.Length+" Y"+IndexBarrelGun%bulletVelocities[0].Length);
+				//UnityEngine.Debug.Log("X"+IndexBarrelGun/bulletVelocities.Length+" Y"+IndexBarrelGun%bulletVelocities[0].Length);
 			}
 		}
-		UnityEngine.Debug.Log("INDEX "+IndexBarrelGun);
+		//UnityEngine.Debug.Log("INDEX "+IndexBarrelGun);
 
 		barrelGun.localPosition = defPosBarrGun+GetBarrelGunPosition();
-		var _fire = Input.GetAxis ("Fire1");
+		var _fire =Input.GetAxisRaw("Fire1");// ? Input.GetAxis ("Fire1"): 0;
 	
-		//UnityEngine.Debug.Log("Fire 1 "+val.ToString());
+		UnityEngine.Debug.Log("Fire1 "+_fire.ToString());
 
-		if (Time.time > _timetoshot && _fire > 0) {
-			_timetoshot += _time;
+		if (_fire > 0){
 
-			var bullet = 	Instantiate(prefabBullet,barrelGun.position , Quaternion.identity) as GameObject ;
-			//UnityEngine.Debug.Log(bullet.GetType().Name);
-			if(bullet!= null){
-			
+			if(Time.time > _timetoshot  ) {
+		
+				_timetoshot =Time.time + fireRate;
+				var bullet = Instantiate (prefabBullet, barrelGun.position, Quaternion.identity) as GameObject;
+				//UnityEngine.Debug.Log(bullet.GetType().Name);
+				if (bullet != null) {
+				
 
-				//UnityEngine.Debug.DrawLine(barrelGun.localPosition, GetGunForce());
+					//UnityEngine.Debug.DrawLine(barrelGun.localPosition, GetGunForce());
 
-				var bullContro = 	bullet.GetComponent<BulletController>();
-				bullContro.bullforce = GetGunForce();
+					var bullContro = bullet.GetComponent<BulletController> ();
+					bullContro.bullforce = GetGunForce ();
 
+				}
+				adudiosource.Play ();
 			}
-			adudiosource.Play();
 		}
+
+
 	}
 
 

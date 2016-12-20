@@ -11,7 +11,7 @@ public class BulletController : MonoBehaviour {
 
 	private Transform myTransform;
 
-
+	Vector2 vectorpos ;
 	//private float _gunvel = 0.00000000003f;
 
 	// Use this for initialization
@@ -23,22 +23,29 @@ public class BulletController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		Vector2 vectorpos = myTransform.position;//* _gunvel; 
+		 vectorpos = myTransform.position;//* _gunvel; 
 		myTransform.position = vectorpos + bullforce* velocity * Time.deltaTime;
 
 
 		Vector2 mynpos = myTransform.position;
 
-		Vector2 _result = originalpos - mynpos ;
+		Vector2 _result = Camera.main.WorldToScreenPoint (vectorpos); 
 
-		_result = Camera.main.WorldToScreenPoint(_result);
-
-		if ((Screen.width )< Mathf.Abs (_result.x) || (Screen.height)< Mathf.Abs (_result.y)) {
+	
+		if (_result.x<0 || (Screen.width )< Mathf.Abs (_result.x) || (Screen.height)< Mathf.Abs (_result.y)||  _result.y<0)  {
 		
+			//UnityEngine.Debug.Log("DESTROY BULLET  "+_result.ToString());
 			Destroy(this.gameObject);
 		}
 	
 
+	}
+
+	void OnGUI() {
+
+		Vector2 aux = Camera.main.WorldToScreenPoint (vectorpos); 
+	
+		GUI.Label(new Rect(aux.x, Screen.height-aux.y, 200, 20), aux.ToString()+" "+vectorpos.ToString());
 	}
 
 

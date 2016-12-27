@@ -10,7 +10,20 @@ public class PlayerController : MonoBehaviour {
 
 
 	private  bool onground;
-	public  float radiousGround;
+
+	public bool OnGoround{
+		get{
+			return onground;
+		}
+	}
+
+	public bool IsJumping{
+		get{
+			return	animator.GetBool ("isjumping");
+	
+		}
+	}
+    public  float radiousGround;
 	public LayerMask groundLayer;
 	public Transform groundCheck= null;
 	public  float JumpHeight;

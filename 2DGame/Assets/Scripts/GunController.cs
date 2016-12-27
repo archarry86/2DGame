@@ -54,8 +54,8 @@ public class GunController : MonoBehaviour {
 			new Vector2 (0, boxsize.size.y / 2),
 			new Vector2 (0, -boxsize.size.y / 2)};
 		bulletPositions [2] = new Vector2[]{new Vector2 (0, 0),
-			new Vector2 (0, boxsize.size.x / 2),
-			new Vector2 (0, - boxsize.size.y / 2)};
+			new Vector2 (0, boxsize.size.y / 2),
+			new Vector2 (-boxsize.size.x / 2,  boxsize.size.y / 2)};
 
 		bulletVelocities [0] = new Vector2[]{
 			new Vector2 (1, 0),
@@ -71,7 +71,7 @@ public class GunController : MonoBehaviour {
 		bulletVelocities [2] = new Vector2[]{
 			new Vector2 (1, 0),
 			new Vector2 (1, 1),
-			new Vector2 (1,0)
+			new Vector2 (0,1)
 		};
 
 	}
@@ -83,39 +83,48 @@ public class GunController : MonoBehaviour {
 		float xaxis = Input.GetAxis("Horizontal");
 
 		float absxaxis = Mathf.Abs (xaxis);
+		float absyaxis = Mathf.Abs (yaxis);
 
-		if (absxaxis == 0 ) {
-			
-			if( yaxis == 0)
-			{
-				IndexBarrelGun = 0;
-			}
-			else if( yaxis > 0)
-			{
-				IndexBarrelGun =1;
-			}
-			else if( yaxis < 0)
-			{
-				IndexBarrelGun =2;
-			}
-			
-		}
-		else if (absxaxis > 0 ) {
+		if (_plcontroller.OnGoround)// || !_plcontroller.IsJumping)
+		{
 
-			if( yaxis == 0)
-			{
-				IndexBarrelGun =3;
+			if (absxaxis == 0) {
+				
+				if (yaxis == 0) {
+					IndexBarrelGun = 0;
+				} else if (yaxis > 0) {
+					IndexBarrelGun = 1;
+				} else if (yaxis < 0) {
+					IndexBarrelGun = 2;
+				}
+				
+			} else if (absxaxis > 0) {
+				
+				if (yaxis == 0) {
+					IndexBarrelGun = 3;
+				} else if (yaxis > 0) {
+					IndexBarrelGun = 4;
+				} else if (yaxis < 0) {
+					IndexBarrelGun = 5;
+					//UnityEngine.Debug.Log("FORCE 5 "+GetGunForce().ToString());
+					
+					//UnityEngine.Debug.Log("X"+IndexBarrelGun/bulletVelocities.Length+" Y"+IndexBarrelGun%bulletVelocities[0].Length);
+				}
 			}
-			else if( yaxis > 0)
-			{
-				IndexBarrelGun =4;
-			}
-			else if( yaxis < 0)
-			{
-				IndexBarrelGun =5;
-				//UnityEngine.Debug.Log("FORCE 5 "+GetGunForce().ToString());
+		} else  {
 
-				//UnityEngine.Debug.Log("X"+IndexBarrelGun/bulletVelocities.Length+" Y"+IndexBarrelGun%bulletVelocities[0].Length);
+			if (absxaxis == 0) {
+				
+				if (absyaxis > 0) 
+					IndexBarrelGun = 8;
+				else if (absyaxis == 0) 
+					IndexBarrelGun = 6;
+				
+			} else if (absxaxis > 0) {
+
+				if (absyaxis > 0) 
+					IndexBarrelGun = 7;
+				
 			}
 		}
 		//UnityEngine.Debug.Log("INDEX "+IndexBarrelGun);
@@ -152,8 +161,15 @@ public class GunController : MonoBehaviour {
 	private Vector2 GetBarrelGunPosition(){
 		
 		var position = bulletPositions[IndexBarrelGun/bulletPositions.Length][IndexBarrelGun%bulletPositions.Length];
-		if(IndexBarrelGun > 2)
+		if(IndexBarrelGun > 2 && IndexBarrelGun != 8 )
 			position.x *= _plcontroller.GetFlipNumber ();
+
+		float yaxis =Input.GetAxis ("Vertical");
+		if (IndexBarrelGun > 5 && yaxis !=0) {
+
+			float absyaxis = Mathf.Abs (yaxis);
+			position.y *= yaxis/ absyaxis;
+		}
 		return position;
 	}
 
@@ -163,6 +179,13 @@ public class GunController : MonoBehaviour {
 		var position = bulletVelocities[IndexBarrelGun/bulletVelocities.Length][IndexBarrelGun%bulletVelocities[0].Length];
 		//if(IndexBarrelGun != 0 &&IndexBarrelGun != 3 )
 		position.x *= _plcontroller.GetFlipNumber ()*_forcescale;
+
+		float yaxis =Input.GetAxis ("Vertical");
+		if (IndexBarrelGun > 5 && yaxis !=0) {
+			
+			float absyaxis = Mathf.Abs (yaxis);
+			position.y *= yaxis/ absyaxis;
+		}
 		return position;
 	}
 	

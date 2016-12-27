@@ -40,13 +40,13 @@ public class BulletController : MonoBehaviour {
 	
 
 	}
-
+	/*
 	void OnGUI() {
 
 		Vector2 aux = Camera.main.WorldToScreenPoint (vectorpos); 
 	
 		GUI.Label(new Rect(aux.x, Screen.height-aux.y, 200, 20), aux.ToString()+" "+vectorpos.ToString());
-	}
+	}*/
 
 
 }

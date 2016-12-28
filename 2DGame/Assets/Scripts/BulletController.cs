@@ -40,6 +40,22 @@ public class BulletController : MonoBehaviour {
 	
 
 	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.layer == 9){//"Enemies") {
+
+			other.gameObject.GetComponent<HitController>().HitCharacter();
+
+			Destroy(this.gameObject);
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D other) {
+		if (other.gameObject.layer == 9){// "Enemies") {
+			other.gameObject.GetComponent<HitController>().HitCharacter();
+			Destroy(this.gameObject);
+		}
+	}
 	/*
 	void OnGUI() {
 

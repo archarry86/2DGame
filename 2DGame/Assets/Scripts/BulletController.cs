@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BulletController : MonoBehaviour {
 
+	public float BulletDamage;
 
 	public Vector2 bullforce;
 	private Vector2 originalpos;
@@ -43,17 +44,23 @@ public class BulletController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.layer == 9){//"Enemies") {
-
+			var enemyhealth = other.gameObject.GetComponent<EnemyHealth>();
+			if(enemyhealth.IsAlive()){
 			other.gameObject.GetComponent<HitController>().HitCharacter();
-
+			enemyhealth.AddDamage(BulletDamage);;
 			Destroy(this.gameObject);
+			}
 		}
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.layer == 9){// "Enemies") {
-			other.gameObject.GetComponent<HitController>().HitCharacter();
-			Destroy(this.gameObject);
+			var enemyhealth = other.gameObject.GetComponent<EnemyHealth>();
+			if(enemyhealth.IsAlive()){
+				other.gameObject.GetComponent<HitController>().HitCharacter();
+				enemyhealth.AddDamage(BulletDamage);;
+				Destroy(this.gameObject);
+			}
 		}
 	}
 	/*

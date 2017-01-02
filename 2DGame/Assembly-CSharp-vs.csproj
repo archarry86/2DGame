@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\HitController.cs" />
      <Compile Include="Assets\Scripts\OrbitBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Rd_en_AI.cs" />
+     <Compile Include="Assets\Scripts\Red_en_states.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.6/UnityEngine.UI.dll</HintPath>
  </Reference>

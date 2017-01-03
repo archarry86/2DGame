@@ -33,10 +33,7 @@ public class Rd_en_AI : MonoBehaviour {
 	void FixedUpdate () {
 		UnityEngine.Debug.Log("AI EN "+this.MyState);
 
-		if(Mathf.Abs( controller.riigbody.velocity.y) != 0)
-			MyState = RDStates.jumping;
-		else if( MyState == RDStates.jumping &&  controller.riigbody.velocity.y == 0)
-			MyState = RDStates.ilde;
+	
 		
 	
 
@@ -45,31 +42,39 @@ public class Rd_en_AI : MonoBehaviour {
 			time= Time.time +Timetosetstate;
 
 			if (MyState == RDStates.ilde) {
+			
+				if(range> 0 && range< 40){
 
-				if(range< 0.25f){
-					MyState = RDStates.walking;
-					controller.Direction = new Vector2(1,0);
-				}else	if(range> 0.25f){
+					controller.Force = new Vector2(0,90);
+					MyState = RDStates.jumping;
+
+			
+				}else	if(range>= 40 && range <=50){
 					MyState = RDStates.walking;
 					controller.Direction = new Vector2(-1,0);
 				}
-				else	if(range> 0.50f){
-					controller.Force = new Vector2(0,20);
-					MyState = RDStates.jumping;
+				else if(range> 50){
+					MyState = RDStates.walking;
+					controller.Direction = new Vector2(1,0);
 				}
 
 			}
 			else if(MyState == RDStates.walking){
 
-				//if(range< 0.10f){
-					//controller.Direction = new Vector2(0,0);
+				 if(range< 40){
+					controller.Force = new Vector2(0,90);
+					MyState = RDStates.jumping;
+				}
+			/*	else if(range< 10){
+					controller.Direction = new Vector2(0,0);
+					controller.Force = new Vector2(0,0);
 					
-					//MyState = RDStates.ilde;
+					MyState = RDStates.ilde;
 					
-				//}else
+				}*/else
 				{
-					UnityEngine.Debug.Log("walking "+controller.Direction);
-					controller.Direction = new Vector2(controller.Direction.x * -1, controller.Direction.y);
+					//UnityEngine.Debug.Log("walking "+controller.Direction);
+					controller.Direction = new Vector2(controller.Direction.x * -1, 0);
 
 				}
 
@@ -77,8 +82,18 @@ public class Rd_en_AI : MonoBehaviour {
 
 			}
 			else if(MyState == RDStates.jumping){
-				if(controller.riigbody.velocity.y == 0)
+
+				if(controller.onground)
 					MyState = RDStates.ilde;
+				else{
+					//UnityEngine.Debug.Log("changing direction "+controller.Direction);
+					if(range> 0.0 && range< 50){
+						controller.Direction = new Vector2(1,0);
+					}else	if(range>= 50 && range <= 100){
+						controller.Direction = new Vector2(-1,0);
+					}
+
+				}
 			}
 		}
 	}

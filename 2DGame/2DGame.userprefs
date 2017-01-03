@@ -1,13 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Rd_en_AI.cs">
     <Files>
-      <File FileName="Assets\Scripts\Red_en_states.cs" Line="32" Column="3" />
-      <File FileName="Assets\Scripts\BulletController.cs" Line="63" Column="5" />
-      <File FileName="Assets\Scripts\EnemyHealth.cs" Line="11" Column="28" />
-      <File FileName="d:\DESARROLLO\JUEGOS\2DGame\2DGame\Assets\Scripts\PlayerController.cs" Line="9" Column="2" />
-      <File FileName="Assets\Scripts\Rd_en_AI.cs" Line="45" Column="35" />
-      <File FileName="d:\DESARROLLO\JUEGOS\2DGame\2DGame\Assets\Scripts\GunController.cs" Line="28" Column="20" />
+      <File FileName="Assets\Scripts\Rd_en_AI.cs" Line="64" Column="18" />
+      <File FileName="Assets\Scripts\Red_en_states.cs" Line="41" Column="1" />
+      <File FileName="d:\DESARROLLO\JUEGOS\2DGame\2DGame\Assets\Scripts\PlayerController.cs" Line="61" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

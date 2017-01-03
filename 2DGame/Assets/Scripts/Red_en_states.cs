@@ -6,21 +6,26 @@ public class Red_en_states : MonoBehaviour {
 
 	public Animator animator;
 	public Transform transform;
-	public Rigidbody2D riigbody;
+	public Rigidbody2D rigidbody;
 
 	public bool facingRight;
 	public  float MaxHorizontalVelocity = 1.5f;
 
 	public EnemyHealth healthcontroller;
+	public Transform GroundChecker ;
 
+	public  float radiousGround;
+	public LayerMask groundLayer;
+	public bool onground ;
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
 		transform = this.GetComponent<Transform> ();
 		Direction = new Vector2 (0, 0);
 		facingRight = false;
-		riigbody = this.GetComponent<Rigidbody2D> ();
+		rigidbody = this.GetComponent<Rigidbody2D> ();
 		healthcontroller = this.GetComponent<EnemyHealth> ();
+		Force = new Vector2 (0, 0);
 	}
 	
 	// Update is called once per frame
@@ -29,11 +34,18 @@ public class Red_en_states : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-
+		 onground = Physics2D.OverlapCircle(GroundChecker.position,radiousGround , groundLayer.value);
+		UnityEngine.Debug.Log ("en onground?" +onground);
 		if (healthcontroller.IsAlive()) {
 
-			if (riigbody.velocity.y == 0 && Force.y != 0) {
-				riigbody.AddForce (new Vector2 (0, Force.y));
+
+			if (onground && Force.y>  0) {
+
+				//transform.position = new Vector2(transform.position.x, transform.position.y+10);
+				rigidbody.AddForce(new Vector2(0,Force.y));
+			
+				onground = false;
+				Force = new Vector2(0,0);
 			}
 			animator.SetFloat ("xaxis", Mathf.Abs (Direction.x));
 
@@ -46,12 +58,16 @@ public class Red_en_states : MonoBehaviour {
 			}
 
 
-			animator.SetFloat ("yvel", riigbody.velocity.y);
+			animator.SetFloat ("yvel", rigidbody.velocity.y);
 
-			Vector2 _vector = new Vector2 (Direction.x * MaxHorizontalVelocity, riigbody.velocity.y);
-			riigbody.velocity = _vector;
+			Vector2 _vector = new Vector2 (Direction.x * MaxHorizontalVelocity, rigidbody.velocity.y);
+			rigidbody.velocity = _vector;
 
-			animator.SetBool ("onground", riigbody.velocity.y == 0);
+			animator.SetBool ("onground", onground);
+			//TODO DELETE JUST  TO PROVE
+			if(transform.position.y < -10){
+				transform.position = new Vector2(transform.position.x, 25);
+			}
 		}
 
 	}

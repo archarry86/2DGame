@@ -19,13 +19,22 @@ public class Rd_en_AI : MonoBehaviour {
 	public RDStates MyState = RDStates.ilde;
 
 	public Red_en_states controller;
+	public EnemyHealth enemyHealth;
 
 	public float Timetosetstate;
+	public float Timetosetstatepursuingoints;
+
+	Vector2 point1 = new Vector2(-9,0);
+	Vector2 point2 = new Vector2(0,3);
+	Vector2 point3 = new Vector2(-1,0);
+
+	private bool pursuingpoints;
 	// Use this for initialization
 	void Start () {
 		time = Time.time + Timetosetstate;
 		controller = this.GetComponent<Red_en_states> ();
-
+		enemyHealth = this.GetComponent<EnemyHealth> ();
+		pursuingpoints = false;
 
 	}
 	
@@ -33,11 +42,15 @@ public class Rd_en_AI : MonoBehaviour {
 	void FixedUpdate () {
 		UnityEngine.Debug.Log("AI EN "+this.MyState);
 
-	
+
+
+		if (!enemyHealth.IsAlive ()) {
+			MyState = RDStates.dying;
+		}
 		
 	
 
-		var range = UnityEngine.Random.Range (0, 100);
+		var range = UnityEngine.Random.Range (0, 200)%100;
 		if (time < Time.time) {
 			time= Time.time +Timetosetstate;
 
@@ -87,10 +100,77 @@ public class Rd_en_AI : MonoBehaviour {
 					MyState = RDStates.ilde;
 				else{
 					//UnityEngine.Debug.Log("changing direction "+controller.Direction);
-					if(range> 0.0 && range< 50){
+					if(range> 0 && range< 50){
 						controller.Direction = new Vector2(1,0);
-					}else	if(range>= 50 && range <= 100){
+					}else	if(range>= 50 && range <= 90){
 						controller.Direction = new Vector2(-1,0);
+					}
+					else if(range> 90){
+						controller.SetFlyingMode(true);
+						MyState = RDStates.flying;
+					}
+
+					
+					if(controller.transform.position.y < -6){
+						time = Time.time+ Timetosetstatepursuingoints;
+						MyState = RDStates.flying;
+						pursuingpoints = true;
+						controller.SetFlyingMode(true);
+					}
+
+				}
+			}
+			else if(MyState == RDStates.flying){
+
+				if(controller.onground){
+					MyState = RDStates.ilde;
+					controller.SetFlyingMode(false);
+				}
+				else{
+
+					if(!pursuingpoints){
+						if(range> 0 && range< 40){
+							controller.Direction = new Vector2(1,0);
+						}else	if(range>= 40 && range <= 80){
+							controller.Direction = new Vector2(-1,0);
+						}
+						else	if(range>= 80 && range <= 85){
+							controller.Direction = Vector2.zero;
+						}
+						//
+						else if(  range > 85 ){
+							controller.SetFlyingMode(false);
+							MyState = RDStates.jumping;
+						}
+
+						if(controller.transform.position.y <= -6){
+							time = Time.time+ Timetosetstatepursuingoints;
+							pursuingpoints = true;
+						}
+					}else{
+
+						/*
+						 * 	Vector2 point1 = new Vector2(-9,0);
+							Vector2 point2 = new Vector2(0,2);
+							Vector2 point3 = new Vector2(-1,0)
+						 */ 
+						Vector2 dif=  point1 - new Vector2(controller.transform.position.x,controller.transform.position.y );
+					
+						if( Mathf.Abs(dif.x) > 1 )
+						{
+							controller.Direction = new Vector2(dif.x/Mathf.Abs(dif.x)  ,0);
+						}
+
+						dif= point2 - new Vector2(controller.transform.position.x,controller.transform.position.y );
+						if( Mathf.Abs(dif.y) > 1)
+						{
+							controller.Direction = new Vector2(0,dif.y/Mathf.Abs(dif.y) );
+						}
+						else
+						{
+							pursuingpoints = false;
+						}
+
 					}
 
 				}

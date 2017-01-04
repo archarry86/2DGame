@@ -10,18 +10,28 @@ public class EnemyHealth : MonoBehaviour {
 	private Animator animator;
 	public float timetoDestroy = 0.001f;
 	private float _time;
+
+	private Red_en_states controller;
+
+	private Transform transform;
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
+		controller = GetComponent<Red_en_states> ();
+
+		transform = GetComponent<Transform> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		if (!IsAlive() && !animator.GetBool("isdying")) {
-			_time = Time.time+timetoDestroy;
+
 			animator.SetBool("isdying", true);
 		}
+
+		if( _time == 0 &&animator.GetBool("isdying") && controller.onground)
+		_time = Time.time+timetoDestroy;
 
 	}
 
@@ -29,8 +39,13 @@ public class EnemyHealth : MonoBehaviour {
 
 		 if (!IsAlive() ){
 			
-			if(_time < Time.time  )
+			if(_time!= 0 && _time < Time.time  )
 				Destroy(this.gameObject);
+			else
+			if (transform.position.y < -10) {
+				//transform.position = new Vector2(transform.position.x, 25);
+				Destroy(this.gameObject);
+			}
 		}
 	}
 

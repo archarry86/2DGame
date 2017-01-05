@@ -22,13 +22,21 @@ public class Rd_en_AI : MonoBehaviour {
 	public EnemyHealth enemyHealth;
 
 	public float Timetosetstate;
+
 	public float Timetosetstatepursuingoints;
+	public int pointtopursue;
 
-	Vector2 point1 = new Vector2(-9,0);
-	Vector2 point2 = new Vector2(0,3);
-	Vector2 point3 = new Vector2(-1,0);
 
-	private bool pursuingpoints;
+	private Vector2[] _points = new Vector2[3]{
+	//Vector2 point1 = 
+		new Vector2(-9,-6),
+		//Vector2 point2 = 
+		new Vector2(-9,4),
+		//Vector2 point3 = 
+		new Vector2(-1,4)
+	};
+
+	public bool pursuingpoints;
 	// Use this for initialization
 	void Start () {
 		time = Time.time + Timetosetstate;
@@ -115,6 +123,7 @@ public class Rd_en_AI : MonoBehaviour {
 						time = Time.time+ Timetosetstatepursuingoints;
 						MyState = RDStates.flying;
 						pursuingpoints = true;
+					
 						controller.SetFlyingMode(true);
 					}
 
@@ -146,6 +155,7 @@ public class Rd_en_AI : MonoBehaviour {
 						if(controller.transform.position.y <= -6){
 							time = Time.time+ Timetosetstatepursuingoints;
 							pursuingpoints = true;
+						
 						}
 					}else{
 
@@ -154,20 +164,23 @@ public class Rd_en_AI : MonoBehaviour {
 							Vector2 point2 = new Vector2(0,2);
 							Vector2 point3 = new Vector2(-1,0)
 						 */ 
-						Vector2 dif=  point1 - new Vector2(controller.transform.position.x,controller.transform.position.y );
-					
-						if( Mathf.Abs(dif.x) > 1 )
-						{
-							controller.Direction = new Vector2(dif.x/Mathf.Abs(dif.x)  ,0);
-						}
+						int val = 	(int)pointtopursue % 3;
 
-						dif= point2 - new Vector2(controller.transform.position.x,controller.transform.position.y );
-						if( Mathf.Abs(dif.y) > 1)
+						Vector2 dif= Vector2.zero;
+						Vector2 PAUX= _points[val];
+
+						dif=   PAUX - new Vector2( controller.transform.position.x, controller.transform.position.y)  ;
+						
+						if( Mathf.Abs(dif.magnitude) > 2.5f )
 						{
-							controller.Direction = new Vector2(0,dif.y/Mathf.Abs(dif.y) );
+							dif.Normalize();
+							controller.Direction = dif; // * Time.deltaTime;//new Vector2(dif.x != 0.0f? dif.x / Mathf.Abs(dif.x): 0  ,dif.y != 0.0f? dif.y / Mathf.Abs(dif.y):0);
 						}
-						else
-						{
+						else{
+							var aux = pointtopursue;
+							pointtopursue = (pointtopursue+1) % 3;
+							controller.Direction = Vector2.zero;
+							if(aux == 2 && pointtopursue == 0)
 							pursuingpoints = false;
 						}
 
@@ -176,5 +189,7 @@ public class Rd_en_AI : MonoBehaviour {
 				}
 			}
 		}
+
+	    
 	}
 }

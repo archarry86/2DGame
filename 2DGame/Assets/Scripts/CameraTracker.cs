@@ -9,9 +9,14 @@ public class CameraTracker : MonoBehaviour {
 
 	public float smoothing;
 
+	public bool validminy;
+
 	private float minY;
 
 	private Transform mytransform;
+
+
+	private bool active = true;
 
 	// Use this for initialization
 	void Start () {
@@ -24,16 +29,19 @@ public class CameraTracker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-		Vector3 result = target.position + offset;
 
-		if (result.y < minY)
-		{
-			result.y = minY;
+		active = target != null;
+		if (active) {
+
+			Vector3 result = target.position + offset;
+
+
+			if (validminy && result.y < minY) {
+				result.y = minY;
+			}
+
+			mytransform.position = Vector3.Lerp (mytransform.position, result, smoothing * Time.deltaTime);
 		}
-
-		mytransform.position = Vector3.Lerp(mytransform.position ,result,smoothing* Time.deltaTime);
-
 	}
 
 

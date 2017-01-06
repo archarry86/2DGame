@@ -11,12 +11,15 @@ public class Rd_en_AI : MonoBehaviour {
 		walking = 1,
 		jumping = 2,
 		flying = 3,
-		dying = 4
+		dying = 4,
+		shooting= 5,
 	}
 	
 	private float time ;
 	
 	public RDStates MyState = RDStates.ilde;
+
+	public RDStates PreviousMyState = RDStates.ilde;
 
 	public Red_en_states controller;
 	public EnemyHealth enemyHealth;
@@ -24,8 +27,10 @@ public class Rd_en_AI : MonoBehaviour {
 	public float Timetosetstate;
 
 	public float Timetosetstatepursuingoints;
-	public int pointtopursue;
 
+	public float Timetostateflying;
+
+	private int pointtopursue;
 
 	private Vector2[] _points = new Vector2[3]{
 	//Vector2 point1 = 
@@ -60,7 +65,28 @@ public class Rd_en_AI : MonoBehaviour {
 
 		var range = UnityEngine.Random.Range (0, 200)%100;
 		if (time < Time.time) {
+			//default timetostate
 			time= Time.time +Timetosetstate;
+
+			if(MyState == RDStates.shooting && !controller.isShoting ){
+
+				MyState= PreviousMyState;
+			}
+			else if(MyState == RDStates.shooting && controller.isShoting ){
+				
+				controller.isShoting = false;
+				return;
+			}
+
+			else if(range % 7 == 0 ){//%2 == 0 && range %7 == 0){
+
+				controller.isShoting = true;
+				PreviousMyState = MyState;
+				MyState = RDStates.shooting;
+				return ;
+			}
+
+		
 
 			if (MyState == RDStates.ilde) {
 			
@@ -131,6 +157,8 @@ public class Rd_en_AI : MonoBehaviour {
 			}
 			else if(MyState == RDStates.flying){
 
+				time = Time.time +Timetostateflying;
+
 				if(controller.onground){
 					MyState = RDStates.ilde;
 					controller.SetFlyingMode(false);
@@ -148,6 +176,7 @@ public class Rd_en_AI : MonoBehaviour {
 						}
 						//
 						else if(  range > 85 ){
+							time = Time.time +Timetosetstate;
 							controller.SetFlyingMode(false);
 							MyState = RDStates.jumping;
 						}
@@ -171,12 +200,16 @@ public class Rd_en_AI : MonoBehaviour {
 
 						dif=   PAUX - new Vector2( controller.transform.position.x, controller.transform.position.y)  ;
 						
-						if( Mathf.Abs(dif.magnitude) > 2.5f )
+						if( Mathf.Abs(dif.magnitude) > 1)
 						{
 							dif.Normalize();
 							controller.Direction = dif; // * Time.deltaTime;//new Vector2(dif.x != 0.0f? dif.x / Mathf.Abs(dif.x): 0  ,dif.y != 0.0f? dif.y / Mathf.Abs(dif.y):0);
 						}
 						else{
+
+							Vector2 _p =	controller.transform.position;
+							controller.transform.position= Vector2.Lerp(controller.transform.position, _p+ dif, 10);
+
 							var aux = pointtopursue;
 							pointtopursue = (pointtopursue+1) % 3;
 							controller.Direction = Vector2.zero;

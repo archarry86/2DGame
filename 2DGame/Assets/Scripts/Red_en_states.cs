@@ -18,6 +18,8 @@ public class Red_en_states : MonoBehaviour {
 	public LayerMask groundLayer;
 	public bool onground ;
 	public bool isFlying =false;
+
+	public bool isShoting = false;
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
@@ -35,9 +37,21 @@ public class Red_en_states : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+
+
+
+
+
+
 		 onground = Physics2D.OverlapCircle(GroundChecker.position,radiousGround , groundLayer.value);
 		UnityEngine.Debug.Log ("en onground?" +onground);
 		if (healthcontroller.IsAlive ()) {
+
+			animator.SetBool ("isshooting", isShoting);
+			if (isShoting) {
+
+				return ;
+			}
 
 
 			if (onground && Force.y > 0) {

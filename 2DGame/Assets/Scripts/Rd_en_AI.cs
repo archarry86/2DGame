@@ -34,11 +34,11 @@ public class Rd_en_AI : MonoBehaviour {
 
 	private Vector2[] _points = new Vector2[3]{
 	//Vector2 point1 = 
-		new Vector2(-9,-6),
+		new Vector2(-10,-6),
 		//Vector2 point2 = 
-		new Vector2(-9,4),
+		new Vector2(-10,4),
 		//Vector2 point3 = 
-		new Vector2(-1,4)
+		new Vector2(-1,-2)
 	};
 
 	public bool pursuingpoints;
@@ -53,13 +53,17 @@ public class Rd_en_AI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		UnityEngine.Debug.Log("AI EN "+this.MyState);
+		//UnityEngine.Debug.Log("AI EN "+this.MyState);
 
 
 
 		if (!enemyHealth.IsAlive ()) {
 			MyState = RDStates.dying;
+
+			return;
 		}
+
+	
 		
 	
 
@@ -81,6 +85,7 @@ public class Rd_en_AI : MonoBehaviour {
 			else if(range % 7 == 0 ){//%2 == 0 && range %7 == 0){
 
 				controller.isShoting = true;
+				controller.AimPlayer();
 				PreviousMyState = MyState;
 				MyState = RDStates.shooting;
 				return ;
@@ -90,13 +95,13 @@ public class Rd_en_AI : MonoBehaviour {
 
 			if (MyState == RDStates.ilde) {
 			
-				if(range> 0 && range< 40){
+				/*if(range> 0 && range< 40){
 
 					controller.Force = new Vector2(0,90);
 					MyState = RDStates.jumping;
 
 			
-				}else	if(range>= 40 && range <=50){
+				}else	*/if(range>= 40 && range <=50){
 					MyState = RDStates.walking;
 					controller.Direction = new Vector2(-1,0);
 				}
@@ -105,26 +110,34 @@ public class Rd_en_AI : MonoBehaviour {
 					controller.Direction = new Vector2(1,0);
 				}
 
+				if (!controller.onground) {
+					MyState = RDStates.jumping;
+				}
+
 			}
 			else if(MyState == RDStates.walking){
 
-				 if(range< 40){
+					 /*if(range< 40){
 					controller.Force = new Vector2(0,90);
 					MyState = RDStates.jumping;
 				}
-			/*	else if(range< 10){
+				else */if(range< 10){
 					controller.Direction = new Vector2(0,0);
 					controller.Force = new Vector2(0,0);
 					
 					MyState = RDStates.ilde;
 					
-				}*/else
+				}else
 				{
 					//UnityEngine.Debug.Log("walking "+controller.Direction);
 					controller.Direction = new Vector2(controller.Direction.x * -1, 0);
 
 				}
 
+
+				if (!controller.onground) {
+					MyState = RDStates.jumping;
+				}
 
 
 			}
@@ -194,27 +207,26 @@ public class Rd_en_AI : MonoBehaviour {
 							Vector2 point3 = new Vector2(-1,0)
 						 */ 
 						int val = 	(int)pointtopursue % 3;
-
+						
 						Vector2 dif= Vector2.zero;
 						Vector2 PAUX= _points[val];
-
+						
 						dif=   PAUX - new Vector2( controller.transform.position.x, controller.transform.position.y)  ;
 						
-						if( Mathf.Abs(dif.magnitude) > 1)
+						if( Mathf.Abs(dif.magnitude) > 1.3f)
 						{
 							dif.Normalize();
 							controller.Direction = dif; // * Time.deltaTime;//new Vector2(dif.x != 0.0f? dif.x / Mathf.Abs(dif.x): 0  ,dif.y != 0.0f? dif.y / Mathf.Abs(dif.y):0);
 						}
-						else{
-
-							Vector2 _p =	controller.transform.position;
-							controller.transform.position= Vector2.Lerp(controller.transform.position, _p+ dif, 10);
-
+						else
+						{
+							controller.transform.position = PAUX;
 							var aux = pointtopursue;
 							pointtopursue = (pointtopursue+1) % 3;
 							controller.Direction = Vector2.zero;
 							if(aux == 2 && pointtopursue == 0)
-							pursuingpoints = false;
+								pursuingpoints = false;
+
 						}
 
 					}

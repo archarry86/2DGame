@@ -1,7 +1,137 @@
 fileFormatVersion: 2
 guid: e81c53a06ac12554388fb68f034a1ca0
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SuperProbotector2_0
+    21300002: SuperProbotector2_1
+    21300004: SuperProbotector2_2
+    21300006: SuperProbotector2_3
+    21300008: SuperProbotector2_4
+    21300010: SuperProbotector2_5
+    21300012: SuperProbotector2_6
+    21300014: SuperProbotector2_7
+    21300016: SuperProbotector2_8
+    21300018: SuperProbotector2_9
+    21300020: SuperProbotector2_10
+    21300022: SuperProbotector2_11
+    21300024: SuperProbotector2_12
+    21300026: SuperProbotector2_13
+    21300028: SuperProbotector2_14
+    21300030: SuperProbotector2_15
+    21300032: SuperProbotector2_16
+    21300034: SuperProbotector2_17
+    21300036: SuperProbotector2_18
+    21300038: SuperProbotector2_19
+    21300040: SuperProbotector2_20
+    21300042: SuperProbotector2_21
+    21300044: SuperProbotector2_22
+    21300046: SuperProbotector2_23
+    21300048: SuperProbotector2_24
+    21300050: SuperProbotector2_25
+    21300052: SuperProbotector2_26
+    21300054: SuperProbotector2_27
+    21300056: SuperProbotector2_28
+    21300058: SuperProbotector2_29
+    21300060: SuperProbotector2_30
+    21300062: SuperProbotector2_31
+    21300064: SuperProbotector2_32
+    21300066: SuperProbotector2_33
+    21300068: SuperProbotector2_34
+    21300070: SuperProbotector2_35
+    21300072: SuperProbotector2_36
+    21300074: SuperProbotector2_37
+    21300076: SuperProbotector2_38
+    21300078: SuperProbotector2_39
+    21300080: SuperProbotector2_40
+    21300082: SuperProbotector2_41
+    21300084: SuperProbotector2_42
+    21300086: SuperProbotector2_43
+    21300088: SuperProbotector2_44
+    21300090: SuperProbotector2_45
+    21300092: SuperProbotector2_46
+    21300094: SuperProbotector2_47
+    21300096: SuperProbotector2_48
+    21300098: SuperProbotector2_49
+    21300100: SuperProbotector2_50
+    21300102: SuperProbotector2_51
+    21300104: SuperProbotector2_52
+    21300106: SuperProbotector2_53
+    21300108: SuperProbotector2_54
+    21300110: SuperProbotector2_55
+    21300112: SuperProbotector2_56
+    21300114: SuperProbotector2_57
+    21300116: SuperProbotector2_58
+    21300118: SuperProbotector2_59
+    21300120: SuperProbotector2_60
+    21300122: SuperProbotector2_61
+    21300124: SuperProbotector2_62
+    21300126: SuperProbotector2_63
+    21300128: SuperProbotector2_64
+    21300130: SuperProbotector2_65
+    21300132: SuperProbotector2_66
+    21300134: SuperProbotector2_67
+    21300136: SuperProbotector2_68
+    21300138: SuperProbotector2_69
+    21300140: SuperProbotector2_70
+    21300142: SuperProbotector2_71
+    21300144: SuperProbotector2_72
+    21300146: SuperProbotector2_73
+    21300148: SuperProbotector2_74
+    21300150: SuperProbotector2_75
+    21300152: SuperProbotector2_76
+    21300154: SuperProbotector2_77
+    21300156: SuperProbotector2_78
+    21300158: SuperProbotector2_79
+    21300160: SuperProbotector2_80
+    21300162: SuperProbotector2_81
+    21300164: SuperProbotector2_82
+    21300166: SuperProbotector2_83
+    21300168: SuperProbotector2_84
+    21300170: SuperProbotector2_85
+    21300172: SuperProbotector2_86
+    21300174: SuperProbotector2_87
+    21300176: SuperProbotector2_88
+    21300178: SuperProbotector2_89
+    21300180: SuperProbotector2_90
+    21300182: SuperProbotector2_91
+    21300184: SuperProbotector2_92
+    21300186: SuperProbotector2_93
+    21300188: SuperProbotector2_94
+    21300190: SuperProbotector2_95
+    21300192: SuperProbotector2_96
+    21300194: SuperProbotector2_97
+    21300196: SuperProbotector2_98
+    21300198: SuperProbotector2_99
+    21300200: SuperProbotector2_100
+    21300202: SuperProbotector2_101
+    21300204: SuperProbotector2_102
+    21300206: SuperProbotector2_103
+    21300208: SuperProbotector2_104
+    21300210: SuperProbotector2_105
+    21300212: SuperProbotector2_106
+    21300214: SuperProbotector2_107
+    21300216: SuperProbotector2_108
+    21300218: SuperProbotector2_109
+    21300220: SuperProbotector2_110
+    21300222: SuperProbotector2_111
+    21300224: SuperProbotector2_112
+    21300226: SuperProbotector2_113
+    21300228: SuperProbotector2_114
+    21300230: SuperProbotector2_115
+    21300232: SuperProbotector2_116
+    21300234: SuperProbotector2_117
+    21300236: SuperProbotector2_118
+    21300238: SuperProbotector2_119
+    21300240: SuperProbotector2_120
+    21300242: SuperProbotector2_121
+    21300244: SuperProbotector2_122
+    21300246: SuperProbotector2_123
+    21300248: SuperProbotector2_124
+    21300250: SuperProbotector2_125
+    21300252: SuperProbotector2_126
+    21300254: SuperProbotector2_127
+    21300256: SuperProbotector2_128
+    21300258: SuperProbotector2_129
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +155,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +172,1306 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: SuperProbotector2_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 821
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 822
+        width: 45
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 828
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 831
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_4
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 828
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 830
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_6
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 806
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_7
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 810
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_8
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 808
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 773
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_10
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 773
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_11
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 774
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_12
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 776
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_13
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 772
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_14
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 774
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_15
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 751
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_16
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 750
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 726
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_18
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 726
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_19
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 727
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_20
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 728
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_21
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 727
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_22
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 729
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_23
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 695
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_24
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 697
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_25
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 672
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_26
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 673
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_27
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 675
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_28
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 676
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_29
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 676
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_30
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 677
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_31
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 630
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_32
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 635
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_33
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 619
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_34
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 615
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_35
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 630
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_36
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 623
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_37
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 636
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_38
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 619
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_39
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 573
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_40
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 562
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_41
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 564
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_42
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 564
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_43
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 564
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_44
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 565
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_45
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 565
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 570
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_47
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 511
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_48
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 515
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_49
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 516
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_50
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 516
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_51
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 518
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_52
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 518
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_53
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 351
+        width: 83
+        height: 169
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_54
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 514
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_55
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 514
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_56
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 467
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_57
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 468
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_58
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 469
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_59
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 469
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_60
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 472
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_61
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 474
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_62
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 460
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_63
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 461
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_64
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 413
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_65
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 416
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_66
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 405
+        width: 22
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_67
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 407
+        width: 22
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_68
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 413
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_69
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 413
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_70
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 401
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_71
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 403
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_72
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 342
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_73
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 343
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_74
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 342
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_75
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 343
+        width: 21
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_76
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 346
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_77
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 348
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_78
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 344
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_79
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 348
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_80
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 293
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_81
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 293
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_82
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 293
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_83
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 293
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_84
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 293
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_85
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 291
+        width: 49
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_86
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 287
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_87
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 286
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_88
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 287
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_89
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 286
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_90
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 286
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_91
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 231
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_92
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 235
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_93
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 236
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_94
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 238
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_95
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 238
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_96
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 261
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_97
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 259
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_98
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 259
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_99
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 261
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_100
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 261
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_101
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 261
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_102
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 259
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_103
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 261
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_104
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 261
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_105
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 259
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_106
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 261
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_107
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 261
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_108
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 259
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_109
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 261
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_110
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 261
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_111
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 261
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_112
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 261
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_113
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 238
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_114
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 249
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_115
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 249
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_116
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 249
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_117
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 249
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_118
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 249
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_119
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 249
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_120
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 249
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_121
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 249
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_122
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 249
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_123
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 247
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_124
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 249
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_125
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 249
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_126
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 249
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_127
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 247
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_128
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 3
+        width: 142
+        height: 222
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SuperProbotector2_129
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 10
+        width: 246
+        height: 201
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

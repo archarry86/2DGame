@@ -20,6 +20,10 @@ public class Red_en_states : MonoBehaviour {
 	public bool isFlying =false;
 
 	public bool isShoting = false;
+
+
+	public GameObject player;
+
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
@@ -29,6 +33,11 @@ public class Red_en_states : MonoBehaviour {
 		rigidbody = this.GetComponent<Rigidbody2D> ();
 		healthcontroller = this.GetComponent<EnemyHealth> ();
 		Force = new Vector2 (0, 0);
+
+		player = GameObject.FindGameObjectWithTag("Player");
+
+
+	
 	}
 	
 	// Update is called once per frame
@@ -44,11 +53,13 @@ public class Red_en_states : MonoBehaviour {
 
 
 		 onground = Physics2D.OverlapCircle(GroundChecker.position,radiousGround , groundLayer.value);
-		UnityEngine.Debug.Log ("en onground?" +onground);
+		//UnityEngine.Debug.Log ("en onground?" +onground);
 		if (healthcontroller.IsAlive ()) {
 
 			animator.SetBool ("isshooting", isShoting);
 			if (isShoting) {
+
+
 
 				return ;
 			}
@@ -114,6 +125,11 @@ public class Red_en_states : MonoBehaviour {
 		transform.localScale = _localscale;
 	}
 
+	public float GetLocalXScale(){
+		Vector3 _localscale = transform.localScale;
+		return	_localscale.x /Mathf.Abs(_localscale.x) ;
+	}
+
 	public void SetFlyingMode(bool mode){
 		if (mode) {
 			isFlying = mode;
@@ -132,6 +148,26 @@ public class Red_en_states : MonoBehaviour {
 	public Vector2 Force{ 
 		get;
 		set;
+	}
+
+	public bool IsShooting(){
+		return animator.GetBool ("isshooting");
+	}
+
+	public void AimPlayer(){
+		if(player!= null){
+
+			Vector3 VEC = player.GetComponent<PlayerController>().transform.position;
+			var result = (transform.position - VEC).x;
+			//UnityEngine.Debug.Log("AimPlayer  "+transform.position.ToString()+" "+VEC.ToString()+" "+result +" "+Time.time);
+			if(transform.localScale.x > 0 && result > 0){
+				//UnityEngine.Debug.Log("FLIP RIGHT ");
+				Flip();
+			}else if(transform.localScale.x < 0 && result < 0){
+				//UnityEngine.Debug.Log("FLIP LEFT ");
+				Flip();
+			}
+		}
 	}
 }
 

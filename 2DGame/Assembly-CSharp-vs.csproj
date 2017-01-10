@@ -47,12 +47,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BulletController.cs" />
+     <Compile Include="Assets\Scripts\BulletEnemyController.cs" />
      <Compile Include="Assets\Scripts\CameraTracker.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\EnemyShootingController.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GunController.cs" />
      <Compile Include="Assets\Scripts\HitController.cs" />
      <Compile Include="Assets\Scripts\OrbitBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Rd_en_AI.cs" />
      <Compile Include="Assets\Scripts\Red_en_states.cs" />
  <Reference Include="UnityEngine.UI">

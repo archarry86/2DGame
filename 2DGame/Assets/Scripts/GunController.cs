@@ -132,7 +132,7 @@ public class GunController : MonoBehaviour {
 		barrelGun.localPosition = defPosBarrGun+GetBarrelGunPosition();
 		var _fire =Input.GetAxisRaw("Fire1");// ? Input.GetAxis ("Fire1"): 0;
 	
-		UnityEngine.Debug.Log("Fire1 "+_fire.ToString());
+		//UnityEngine.Debug.Log("Fire1 "+_fire.ToString());
 
 		if (_fire > 0){
 

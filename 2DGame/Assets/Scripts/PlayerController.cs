@@ -38,13 +38,14 @@ public class PlayerController : MonoBehaviour {
 
 	private Collider2D []MyColiders;
 
+	private PlayerHealth _plhealth;
 
 	void Start () {
 	
 		transform= this.GetComponent<Transform> ();
 		animator= this.GetComponent<Animator> ();
 		rigidBody2D= this.GetComponent<Rigidbody2D> ();
-
+		_plhealth = this.GetComponent<PlayerHealth> ();
 		MyColiders = this.GetComponents<Collider2D> ();
 		BoxCollider2D boxsize = MyColiders[0] as BoxCollider2D;
 
@@ -53,6 +54,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!_plhealth.IsAlive ())
+			return;
 
 		if(onground){
 			
@@ -71,14 +74,16 @@ public class PlayerController : MonoBehaviour {
 
 
 	void FixedUpdate () {
-	
+		if (!_plhealth.IsAlive ())
+			return;
+
 		float yaxis =Input.GetAxis ("Vertical");
 		float xaxis = Input.GetAxis("Horizontal");
 
 		float absxaxis = Mathf.Abs (xaxis);
 
 		animator.SetFloat ("yaxis",yaxis);
-
+		animator.SetFloat ("xaxis",xaxis);
 		//onliyingcolider.enabled = (yaxis < 0);
 		onground = Physics2D.OverlapCircle(groundCheck.position,radiousGround , groundLayer.value);
 		animator.SetBool ("onground",onground);

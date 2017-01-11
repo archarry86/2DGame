@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		var result = 	GameObject.FindGameObjectsWithTag ("Enemy");
 		
-		//UnityEngine.Debug.Log ("GAMECONTROLLER ENEMIES "+result.Length);
+		UnityEngine.Debug.Log ("GAMECONTROLLER ENEMIES "+result.Length);
 		
 		if (result.Length == 0||  result.Length<NUMBER) {
 			NUMBER++;

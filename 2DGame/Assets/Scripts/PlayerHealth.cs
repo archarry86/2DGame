@@ -9,17 +9,19 @@ public class PlayerHealth : MonoBehaviour {
 	public float timetoDestroy = 0.001f;
 	private float _time;
 	private PlayerController controller;
+	private Rigidbody2D _plrigid;
 
-
-	private bool Isvulnerable = false;
+	public bool Isvulnerable = true;
 	
 	private Transform transform;
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<PlayerController> ();
-		animator = GetComponent<Animator> ();
+		animator = GetComponent<Animator>();
 
-		transform = GetComponent<Transform> ();
+		transform = GetComponent<Transform>();
+
+		_plrigid = this.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -30,8 +32,11 @@ public class PlayerHealth : MonoBehaviour {
 			animator.SetBool("isdying", true);
 		}
 		
-		if( _time == 0 &&animator.GetBool("isdying") && controller.OnGoround)
-			_time = Time.time+timetoDestroy;
+		if (_time == 0 && animator.GetBool ("isdying") && controller.OnGoround) {
+			_time = Time.time + timetoDestroy;
+			_plrigid.velocity = Vector2.zero;
+		}
+
 		
 	}
 	
@@ -52,7 +57,8 @@ public class PlayerHealth : MonoBehaviour {
 	public void AddDamage(float damage){
 		if(Isvulnerable)
 		Health -= damage;
-		
+
+
 	}
 	
 	public void AddHealth(float health){

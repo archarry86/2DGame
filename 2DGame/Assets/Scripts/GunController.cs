@@ -11,6 +11,8 @@ public class GunController : MonoBehaviour {
 
 	private PlayerController _plcontroller;
 
+	private PlayerHealth _plhealth;
+	
 	private Transform _playerTransform;
 
 	private BoxCollider2D boxsize ;
@@ -33,6 +35,7 @@ public class GunController : MonoBehaviour {
 	void Start () {
 		_timetoshot =  Time.time;
 		_plcontroller= this.GetComponent<PlayerController> ();
+		_plhealth = this.GetComponent<PlayerHealth> ();
 		_playerTransform = this.GetComponent<Transform> ();
 
 		adudiosource= this.GetComponent<AudioSource> ();
@@ -56,13 +59,13 @@ public class GunController : MonoBehaviour {
 		bulletPositions [2] = new Vector2[]{new Vector2 (0, 0),
 			new Vector2 (0, boxsize.size.y / 2),
 			new Vector2 (-boxsize.size.x / 2,  boxsize.size.y / 2)};
-
+		
 		bulletVelocities [0] = new Vector2[]{
 			new Vector2 (1, 0),
 			new Vector2 (0, 1),
 			new Vector2 (1,0)
 		};
-
+		
 		bulletVelocities [1] = new Vector2[]{
 			new Vector2 (1, 0),
 			new Vector2 (1,1),
@@ -78,6 +81,8 @@ public class GunController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!_plhealth.IsAlive ())
+			return;
 
 		float yaxis =Input.GetAxis ("Vertical");
 		float xaxis = Input.GetAxis("Horizontal");
